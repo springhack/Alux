@@ -1,9 +1,13 @@
 # Alux
 A flux framework for react.js
 
+A example:
+
 ```javascript
 //Import module
 import Alux from 'alux';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 //Define events
 let events = {
@@ -40,30 +44,22 @@ let actions = Alux.combineActions({
   }
 }, store);
 
-//A fake react class
-class ReactComponent {
-    constructor() {
-        //Nothing
-    }
-    setState(state) {
-        this.state = state;
-    }
+//Connect react component
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    store.connect(this);
+  }
+  render() {
+    return (
+        <div>
+            I love {this.state.alux.change.name} !<br />
+            <button onClick={actions.change}>Change</button>
+        </div>
+    );
+  }
 }
-
-//Just see it as react component
-class App extends ReactComponent {
-    constructor(props) {
-        super(props);
-        store.connect(this);
-        console.log('Initial state:', this.state);
-    }
-    onChange() {
-        actions.change();
-        console.log('Changed state:', this.state);
-    }
-}
-
-//Test it
-let app = new App();
-app.onChange();
+ 
+//Render component
+ReactDOM.render(<App />, document.getElementById('container'));
 ```
