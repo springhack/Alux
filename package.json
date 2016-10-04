@@ -4,8 +4,8 @@
   "description": "A flux framework for react.js",
   "main": "./lib/main.js",
   "scripts": {
-    "test": "echo 'Tested'",
-    "build": "babel src -d lib"
+    "test": "node ./lib/test.js",
+    "build": "babel src -d lib -S"
   },
   "repository": {
     "type": "git",

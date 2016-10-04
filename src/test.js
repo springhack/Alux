@@ -51,11 +51,11 @@ class App extends ReactComponent {
     constructor(props) {
         super(props);
         store.connect(this);
-        console.log(this.state);
+        console.log('Initial state:', this.state);
     }
     onChange() {
         actions.change();
-        console.log(this.state);
+        console.log('Changed state:', this.state);
     }
 }
 

@@ -23,13 +23,13 @@ class Store {
         if (this.reducer.multi)
         {
             for (let re in this.reducer.func)
-                ret[re] = this.reducer.func[re](action, ret[re]);
+                ret[re] = this.reducer.func[re](action, Object.assign({}, ret[re]));
         } else
-            ret = this.reducer(action, this.state);
+            ret = this.reducer(action, Object.assign({}, this.state));
         if (!Object.isEqual(ret, this.state));
             for (let c of this.components)
                 c.setState({
-                    alux : this.state
+                    alux : ret
                 });
     }
 }
