@@ -1,6 +1,6 @@
 {
   "name": "alux",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A flux framework for react.js",
   "main": "./lib/main.js",
   "scripts": {
