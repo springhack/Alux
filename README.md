@@ -1,6 +1,8 @@
 # Alux
 A flux framework for react.js
 
+[![Build Status](https://travis-ci.org/springhack/Alux.svg?branch=master)](https://travis-ci.org/springhack/Alux)
+
 A example:
 
 ```javascript
