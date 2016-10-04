@@ -1,9 +1,5 @@
-# Alux
-A flux framework for react.js
-
-```javascript
 //Import module
-import Alux from 'alux';
+import Alux from './main.js';
 
 //Define events
 let events = {
@@ -66,4 +62,3 @@ class App extends ReactComponent {
 //Test it
 let app = new App();
 app.onChange();
-```
