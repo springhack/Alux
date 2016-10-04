@@ -1,10 +1,10 @@
 {
   "name": "alux",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A flux framework for react.js",
   "main": "./lib/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo 'Tested'",
     "build": "babel src -d lib"
   },
   "repository": {
@@ -20,5 +20,12 @@
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-preset-es2015": "^6.16.0"
-  }
+  },
+  "keywords": [
+    "SpringHack",
+    "flux",
+    "react",
+    "redux",
+    "alxw"
+  ]
 }
