@@ -1,5 +1,6 @@
 //Import module
 import Alux from './main.js';
+import 'babel-polyfill';
 
 //Define events
 let events = {
@@ -28,10 +29,10 @@ let store = Alux.createStore(reducers);
 
 //Combine actions
 let actions = Alux.combineActions({
-  change() {
+  change(name) {
     return {
       type : events.CHANGE_NAME,
-      name : 'SpringHack'
+      name : name
     }
   }
 }, store);
@@ -54,7 +55,7 @@ class App extends ReactComponent {
         console.log('Initial state:', this.state);
     }
     onChange() {
-        actions.change();
+        actions.change('SpringHack');
         console.log('Changed state:', this.state);
     }
 }
